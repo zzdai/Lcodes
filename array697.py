@@ -13,14 +13,16 @@ class Solution(object):
 			count[num] = count.get(num,0)+1
 
 		degree = max(count.values())
-		ans = len(count)
+		ans = len(nums)
 		for num in count:
 			if count[num] == degree:
+				print(second[num])
+				print(first[num])
 				ans = min(ans,second[num]-first[num]+1)
 		return ans
 
 x = Solution()
-nums1 = [1,2,2,3,1]
+#nums1 = [1,2,2,3,1]
 nums2 = [1,2,2,3,1,4,2]
-print(x.findShortestSubArray(nums1))
+#print(x.findShortestSubArray(nums1))
 print(x.findShortestSubArray(nums2)) 
